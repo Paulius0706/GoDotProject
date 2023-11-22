@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bv7sv3f2a2dwo"]
+
+[ext_resource type="Shader" uid="uid://bjq1o863naa7r" path="res://Shaders/ShipPatrsBaseShader.tres" id="1_725f5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_725f5")

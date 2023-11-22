@@ -1,0 +1,207 @@
+[gd_scene load_steps=9 format=3 uid="uid://bu2y1ysg6786c"]
+
+[ext_resource type="Script" path="res://Scripts/UI/WorldUI.cs" id="1_l6nff"]
+[ext_resource type="Script" path="res://Scripts/UI/PartInfo.cs" id="2_2ubnk"]
+[ext_resource type="StyleBox" uid="uid://5b0h28r3og8o" path="res://UI/Styles/ContainerStyle.tres" id="2_5ljix"]
+[ext_resource type="Theme" uid="uid://dq5xikvegp6vr" path="res://UI/Settings/WorldUIDefault.tres" id="2_ir1em"]
+[ext_resource type="Script" path="res://Scripts/UI/BuilderInterface.cs" id="5_3f773"]
+[ext_resource type="Script" path="res://Scripts/UI/PlaceHolder.cs" id="6_4bgok"]
+[ext_resource type="StyleBox" uid="uid://jp7blphf2was" path="res://UI/Styles/BiggerContainerStyle.tres" id="6_v678e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rk7r0"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6nff")
+
+[node name="PartInfo" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 173.0
+offset_bottom = 76.0
+theme = ExtResource("2_ir1em")
+script = ExtResource("2_2ubnk")
+
+[node name="LabelsContainer" type="PanelContainer" parent="PartInfo"]
+layout_mode = 2
+theme = ExtResource("2_ir1em")
+
+[node name="ContentContainer" type="PanelContainer" parent="PartInfo/LabelsContainer"]
+layout_mode = 2
+theme = ExtResource("2_ir1em")
+theme_override_styles/panel = ExtResource("2_5ljix")
+
+[node name="Labels" type="VBoxContainer" parent="PartInfo/LabelsContainer/ContentContainer"]
+layout_mode = 2
+theme = ExtResource("2_ir1em")
+
+[node name="Name" type="Button" parent="PartInfo/LabelsContainer/ContentContainer/Labels"]
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("2_ir1em")
+theme_override_colors/font_disabled_color = Color(0.933333, 0.933333, 0.933333, 1)
+disabled = true
+text = "Name"
+flat = true
+
+[node name="Position" type="Button" parent="PartInfo/LabelsContainer/ContentContainer/Labels"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_disabled_color = Color(0.933333, 0.933333, 0.933333, 1)
+disabled = true
+text = "Position
+"
+flat = true
+
+[node name="Power" type="Button" parent="PartInfo/LabelsContainer/ContentContainer/Labels"]
+layout_mode = 2
+mouse_filter = 2
+disabled = true
+text = "Power"
+flat = true
+
+[node name="PositiveKey" type="Button" parent="PartInfo/LabelsContainer/ContentContainer/Labels"]
+layout_mode = 2
+mouse_filter = 2
+disabled = true
+text = "Positive Key
+"
+flat = true
+
+[node name="NegativeKey" type="Button" parent="PartInfo/LabelsContainer/ContentContainer/Labels"]
+layout_mode = 2
+mouse_filter = 2
+disabled = true
+text = "Negative Key"
+flat = true
+
+[node name="Tag" type="Button" parent="PartInfo/LabelsContainer/ContentContainer/Labels"]
+layout_mode = 2
+mouse_filter = 2
+disabled = true
+text = "Tag
+"
+flat = true
+
+[node name="ValuesContainer" type="PanelContainer" parent="PartInfo"]
+layout_mode = 2
+theme = ExtResource("2_ir1em")
+
+[node name="ContentContainer" type="PanelContainer" parent="PartInfo/ValuesContainer"]
+layout_mode = 2
+theme = ExtResource("2_ir1em")
+theme_override_styles/panel = ExtResource("2_5ljix")
+
+[node name="Values" type="VBoxContainer" parent="PartInfo/ValuesContainer/ContentContainer"]
+layout_mode = 2
+theme = ExtResource("2_ir1em")
+
+[node name="Name" type="Button" parent="PartInfo/ValuesContainer/ContentContainer/Values"]
+layout_mode = 2
+mouse_filter = 2
+disabled = true
+text = "Frame
+"
+flat = true
+
+[node name="Position" type="Button" parent="PartInfo/ValuesContainer/ContentContainer/Values"]
+layout_mode = 2
+mouse_filter = 2
+disabled = true
+text = "-4: 1"
+flat = true
+
+[node name="Power" type="HSlider" parent="PartInfo/ValuesContainer/ContentContainer/Values"]
+custom_minimum_size = Vector2(150, 31)
+layout_mode = 2
+mouse_filter = 1
+min_value = -1.0
+max_value = 1.0
+step = 0.2
+value = 1.0
+
+[node name="Value" type="Button" parent="PartInfo/ValuesContainer/ContentContainer/Values/Power"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 0.478431)
+disabled = true
+text = "100%"
+
+[node name="PositiveKey" type="Button" parent="PartInfo/ValuesContainer/ContentContainer/Values"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("2_ir1em")
+toggle_mode = true
+text = "None
+"
+
+[node name="NegativeKey" type="Button" parent="PartInfo/ValuesContainer/ContentContainer/Values"]
+layout_mode = 2
+mouse_filter = 1
+toggle_mode = true
+text = "None"
+
+[node name="Tag" type="LineEdit" parent="PartInfo/ValuesContainer/ContentContainer/Values"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+mouse_filter = 1
+alignment = 1
+
+[node name="BuilderInterface" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_3f773")
+
+[node name="Cursor" type="Panel" parent="BuilderInterface"]
+layout_mode = 1
+offset_left = 440.0
+offset_top = 419.0
+offset_right = 590.0
+offset_bottom = 569.0
+size_flags_horizontal = 4
+theme = ExtResource("2_ir1em")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rk7r0")
+
+[node name="PlaceHolderBacground" type="PanelContainer" parent="BuilderInterface"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -505.0
+offset_top = -110.0
+offset_right = 505.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("2_ir1em")
+theme_override_styles/panel = ExtResource("6_v678e")
+
+[node name="PlaceHolder" type="HBoxContainer" parent="BuilderInterface/PlaceHolderBacground"]
+custom_minimum_size = Vector2(1000, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+script = ExtResource("6_4bgok")

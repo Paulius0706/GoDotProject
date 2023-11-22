@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b37678ga7vepg"]
+
+[ext_resource type="Shader" uid="uid://bgedfe4ervo62" path="res://Shaders/MainTestShader.tres" id="1_538vi"]
+[ext_resource type="Texture2D" uid="uid://r7l2m7qsk7dt" path="res://Textures/Images/BuildGridFrame.png" id="2_qa4ab"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_538vi")
+shader_parameter/Texture = ExtResource("2_qa4ab")

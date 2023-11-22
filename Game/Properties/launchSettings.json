@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Game": {
+      "commandName": "Project",
+      "commandLineArgs": "-e --path \"C:\\Users\\Paulius\\Desktop\\GoDot\\Game\""
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\Paulius\\Desktop\\GoDot\\Godot_v4.0.2-stable_mono_win64\\Godot_v4.0.2-stable_mono_win64.exe",
+      "commandLineArgs": "--path.--verbose \"C:\\Users\\Paulius\\Desktop\\GoDot\\Game\"",
+      "workingDirectory": ".",
+      "nativeDebugging": true
+    }
+  }
+}

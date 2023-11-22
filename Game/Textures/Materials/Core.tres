@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://c7qxfdul3sgka"]
+
+[ext_resource type="Shader" uid="uid://bgedfe4ervo62" path="res://Shaders/MainTestShader.tres" id="1_m6k2b"]
+[ext_resource type="Texture2D" uid="uid://bpoo2tbabihno" path="res://Textures/Images/ThrusterImage.png" id="2_wyir2"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_m6k2b")
+shader_parameter/Texture = ExtResource("2_wyir2")

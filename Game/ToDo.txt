@@ -1,0 +1,10 @@
+﻿1 Hide to show list
+2 Make cannon work
+2.1 Make cannon settings dynamic more RPM less damage, more bullet HP less speed
+2.2 Add bullet HalfLife
+3 Add limits costom limits for cannon and thruster
+4 Carve out 15 diameter starter aria
+5 make complete terain collisions
+6 make inventory limited
+
+

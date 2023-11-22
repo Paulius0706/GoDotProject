@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Terrain/Chunk.cs" id="1_dng6m"]
+[ext_resource type="MultiMesh" path="res://Meshes/Terrain/ChunkMultiMesh.tres" id="3_xtidh"]
+
+[node name="Chunk" type="Node3D"]
+script = ExtResource("1_dng6m")
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
+multimesh = ExtResource("3_xtidh")
